@@ -9,11 +9,12 @@ def main():
     print(f"Screen width: {SCREEN_WIDTH}")
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     while True:
-        log-state()
+        log_state()
         for event in pygame.event.get():
-            pass
+            if event.type == pygame.QUIT:
+                return
         screen.fill("black")
-        display.flip()
+        pygame.display.flip()
 if __name__ == "__main__":
     main()
 
